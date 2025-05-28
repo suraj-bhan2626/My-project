@@ -1,2 +1,2 @@
 # My-project
-bootcamp projects, and also some 1 &amp; 2 years project.
+bootcamp projects, and also some 1st & 2nd years project to.
