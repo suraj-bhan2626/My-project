@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .welcome {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container" id="login-box">
+  <h2>Login</h2>
+  <input type="text" id="username" placeholder="Enter Username"><br>
+  <input type="password" id="password" placeholder="Enter Password"><br>
+  <button onclick="login()">Login</button>
+</div>
+
+<div class="container" id="welcome-box" style="display:none;">
+  <p class="welcome">Hi, I'm Suraj Bhan</p>
+</div>
+
+<script>
+  function login() {
+    const user = document.getElementById("username").value;
+    const pass = document.getElementById("password").value;
+
+    // Simple hardcoded login check
+    if(user === "suraj" && pass === "1234") {
+      document.getElementById("login-box").style.display = "none";
+      document.getElementById("welcome-box").style.display = "block";
+    } else {
+      alert("Invalid username or password!");
+    }
+  }
+</script>
+
+</body>
+</html>
+
+
